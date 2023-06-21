@@ -1,6 +1,22 @@
 
 #brand{
+    padding-left: 2em;
+    color: #ffffff;
+    font-size: large;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 0px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#brand1{
     font-size: medium;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     padding-left: 1em;
     padding-top: 1em;
     margin: 0px;
@@ -34,4 +50,90 @@ li {
 .search {
     color: #ffffff;
 
+}
+.sidebar {
+    margin: 1em;
+    position: absolute;
+    font-size: medium;
+    right: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.sidebar-opener {
+    cursor: pointer;
+}
+
+.sidebar-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #FF4455;
+    transform: translateX(-100%);
+    transition: ease-in-out 300ms transform;
+    width: 300px;
+}
+
+.sidebar-slider.sidebar-slide-in {
+    transform: translateX(0%);
+    transition: ease-in-out 600ms transform;
+}
+
+.sidebar-close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+}
+
+.sidebar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    height: 100%;
+}
+
+section {
+    display: table;
+}
+  
+.example-label {
+    display: table-cell;
+    font-size: 10px;
+    margin-left: 8px;
+    min-width: 100px;
+}
+  
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+}
+  
+.example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}
+  
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+}
+
+.header{
+    background-color: #4f2494;
+    width: 100%;
+    padding-bottom: 1em;
 }

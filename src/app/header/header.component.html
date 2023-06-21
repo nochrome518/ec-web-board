@@ -1,37 +1,11 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<div class="header">
+  <br>
+  <a id = "brand" class="navbar-brand fw-bold" href="#">CARTNY</a>
+  <nav class="navbar navbar-expand-md " color="primary">
     <div class="container-fluid">
-      <a id = "brand" class="navbar-brand fw-bold" href="#">CARTNY</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active " aria-current="page" href="#">home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " routerLink="categories">categories</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " routerLink="products">products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " routerLink="contactus">contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " routerLink="about">about</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link "routerLink="login">login</a>
-          </li>
-          <li class="nav-search">
-            <mat-form-field appearance="fill">
-                <mat-label class="search"> Search products by name</mat-label>
-                <input matInput/>
-                <mat-icon matPrefix>search</mat-icon>
-              </mat-form-field>
-          </li>
-        </ul>
+      <div class="collapse" >
+          <a id = "brand" class="navbar-brand fw-bold" href="#">CARTNY</a>
+          <a class="nav-link " routerLink="products">Products</a>
         <ul class="navbar-nav sm-icons">
           <li><a class="nav-link" href="#"><i class="bi bi-facebook"></i></a></li>
           <li><a class="nav-link" href="#"><i class="bi bi-instagram"></i></a></li>
@@ -40,4 +14,38 @@
         </ul>
       </div>
     </div>
-  </nav>
+    <br>
+    <div class="sidebar">
+      <div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+        <br> 
+        <div class="example-button-container">
+          <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+  
+    </div>
+    </div>
+</nav>
+
+  <div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+    <div class="sidebar-close" (click)="sidebarShow = !sidebarShow">
+        X
+    </div>
+	  <div class="sidebar-content">
+        <h2><a class="nav-link "routerLink="home">CARTNY</a></h2>
+        <i>"your shopping companion"</i>
+        <div> <a class="nav-link "routerLink="login">Login</a></div>
+        <div><a class="nav-link " routerLink="categories">Categories</a></div>
+        <div><a class="nav-link " routerLink="products">Products</a></div>
+        <div><a class="nav-link " routerLink="about">About</a></div>
+        <div>Downloads</div>
+        <div>Contact Us</div>
+        <div>Admin Login</div>
+        <div>Merchant Login</div>
+        <div>Downloads</div>
+        <div>Contact Us</div>
+	  </div>
+</div>
+</div>
+

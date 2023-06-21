@@ -19,6 +19,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatIconModule,
     MatSelectModule,
+    MatDividerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
