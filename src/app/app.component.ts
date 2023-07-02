@@ -8,4 +8,13 @@ import 'bootstrap';
 })
 export class AppComponent {
   title = 'ec-app';
+  showPopup = false;
+  
+  openPopup() {
+		this.showPopup = true;
+	}
+	
+	closePopup() {
+		this.showPopup = false;
+	}
 }

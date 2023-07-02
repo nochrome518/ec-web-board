@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="root">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <br>
+            <h3><b>LOGIN</b></h3>
+            <app-custom-popup *ngIf="showPopup" (close)="closePopup()"></app-custom-popup>
+          </div>
+          <div class="card-body">
+            <br>
+
+            <form (ngSubmit)="login()" #loginForm="ngForm">
+              <div class="form-group">
+                <!-- <label for="username">Username</label> -->
+                <input type="text" class="form-control" id="username" name="username" placeholder="email" [(ngModel)]="username" required>
+              </div>
+              <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" class="form-control" id="password" placeholder="password" name="password" [(ngModel)]="password" required>
+              </div>
+              <br>
+              <span>
+                <button type="submit"  mat-raised-button color="primary">Login</button>
+                <br>
+                <p></p>
+              <button class= "signup" mat-raised-button color="primary" routerLink="/signup">Create Account</button>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

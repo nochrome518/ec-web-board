@@ -1,7 +1,54 @@
-* {
+.root{
+    max-height: 100em;
+    background-color: #b291e7;
     position: absolute;
     right: 0;
     left: 0;
-    padding: 1rem;
+    bottom: 0;
+    top: 100px;
+}
+.container {
+    margin-top: 100px;
+    z-index: 1; 
+    width: 70%;
+}
+  
+.card-header {
+    background-color: #e5eaf5;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
     text-align: center;
+    background-color:  #7541ca; 
+}
+h3{
+    border: 2px 2px black;
+}
+/* .card {
+    border: 1px solid black;
+    box-shadow: 5px 5px 20px   #4f2494;
+} */
+.card-body {
+    padding: 20px;
+    background-color: #b291e7;
+}
+
+.card-body p {
+    position: absolute;
+    /* top: 0; */
+    right: 100px;
+    bottom: 16px;
+    text-align: center;
+}
+
+.card-body .signup {
+    position: absolute;
+    /* top: 0; */
+    right: 20px;
+    bottom: 20px;
+}
+  
+.card-body input{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
 }

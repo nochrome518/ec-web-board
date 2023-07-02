@@ -54,10 +54,12 @@ li {
 .sidebar {
     margin: 1em;
     position: absolute;
+    overflow: visible;
     font-size: medium;
     right: 20px;
     text-align: center;
     color: #ffffff;
+    z-index: 5; 
 }
 
 .sidebar-opener {
@@ -69,10 +71,11 @@ li {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #FF4455;
+    background-color:#6326c5;
     transform: translateX(-100%);
     transition: ease-in-out 300ms transform;
     width: 300px;
+    z-index: 5; 
 }
 
 .sidebar-slider.sidebar-slide-in {

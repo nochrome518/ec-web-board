@@ -21,7 +21,11 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
-
+import { ReactiveFormsModule } from '@angular/forms'; // For reactive forms
+import { SignUpComponent } from './sign-up/sign-up.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { CustomPopupComponent } from './custom-popup/custom-popup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,9 @@ import {MatButtonModule} from '@angular/material/button';
     CategoriesComponent,
     ContactusComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent,
+    CustomPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,12 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatSelectModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
