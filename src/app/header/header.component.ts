@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +7,15 @@ import {MatButtonModule} from '@angular/material/button';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  public sidebarShow: boolean = false;
-  constructor() { }
+	public sidebarShow: boolean = false;
+	isLoggedIn: boolean = false;
 
-  ngOnInit(): void {
-  }
+   	constructor(public authService: AuthService) { }
 
+	ngOnInit(): void {
+	}
+
+	logout() {
+		this.authService.logout()
+	}
 }

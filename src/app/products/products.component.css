@@ -1,7 +1,17 @@
-* {
+.product-grid {
+    top: 7em;
     position: absolute;
-    right: 0;
-    left: 0;
-    padding: 1rem;
-    text-align: center;
-}
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    background-color: #b291e7;
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .card {
+    margin: 10%;
+    margin-top: 15%;
+    padding: 5px;
+    flex: 1;
+  }

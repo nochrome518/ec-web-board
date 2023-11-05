@@ -1,47 +1,47 @@
 <div class="root">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-header">
-              <br>
-              <h3><b>SIGNUP</b></h3>
-              <app-custom-popup *ngIf="showPopup" (close)="closePopup()"></app-custom-popup>
-            </div>
-            <div class="card-body">
-              <br>
-              <form (ngSubmit)="signup()" #loginForm="ngForm">
-                <div class="form-group">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="email" [(ngModel)]="email" required>
-                </div>
-                <div class="form-group">
-                  <input type="password" class="form-control" id="password" placeholder="password" name="password" [(ngModel)]="password" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="fullname" placeholder="full name" name="fullname" [(ngModel)]="fullName" required>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="phone" placeholder="phone number" name="phone" [(ngModel)]="phoneNumber" required>
-                  </div>
-                  <div class="form-group">
-                    <mat-form-field>
-                        <mat-label>date of birth</mat-label>
-                        <input matInput [matDatepicker]="myDatePicker" name="dob" [(ngModel)]="dob" required>
-                        <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
-                        <mat-datepicker class="custom-datepicker" #myDatePicker></mat-datepicker>
-                      </mat-form-field>
-                  </div>
-                <br>
-                <span>
-                  <button type="submit"  mat-raised-button color="primary">Submit</button>
-                  <br>
-                  <p></p>
-                <button class= "signup" mat-raised-button color="primary" routerLink="/login">Login</button>
-                </span>
-              </form>
-            </div>
-          </div>
-        </div>
+			<div class="col-md-6">
+			<div class="card">
+				<div class="card-header">
+				<br>
+				<h3><b>SIGNUP</b></h3>
+				<!-- <app-custom-popup *ngIf="showPopup" [title]="title"  [message]="message" (close)="closePopup()"></app-custom-popup> -->
+				</div>
+				<div class="card-body">
+				<br>
+				<form (ngSubmit)="signup()" #loginForm="ngForm">
+					<div class="form-group">
+					<input type="email" class="form-control" id="email" name="email" placeholder="email" [(ngModel)]="email" required>
+					</div>
+					<div class="form-group">
+					<input type="password" class="form-control" id="password" placeholder="password" name="password" [(ngModel)]="password" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="fullname" placeholder="full name" name="fullname" [(ngModel)]="fullName" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="phone" placeholder="phone number" name="phone" [(ngModel)]="phoneNumber" required>
+					</div>
+					<div class="form-group">
+						<mat-form-field>
+							<mat-label>date of birth</mat-label>
+							<input matInput [matDatepicker]="myDatePicker" name="dob" [(ngModel)]="dob" required>
+							<mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+							<mat-datepicker class="custom-datepicker" #myDatePicker></mat-datepicker>
+						</mat-form-field>
+					</div>
+					<br>
+					<span>
+					<button class= "signup" mat-raised-button color="primary" routerLink="/login">Login</button>
+					<br>
+					<p></p>
+					<button type="submit"  mat-raised-button color="primary">Submit</button>
+					</span>
+				</form>
+				</div>
+			</div>
+			</div>
       </div>
     </div>
   </div>

@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
+import { Messages, Titles } from '../constants/messages';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent {
   email: string | undefined;
   password: string | undefined;
   fullName: string | undefined;
@@ -14,11 +16,9 @@ export class SignUpComponent implements OnInit {
   phoneNumber: string | undefined;
   startDate = new Date(1990, 0, 1);
   showPopup = false;
-
-  constructor(private authService: AuthService) { 
-  }
-  
-  ngOnInit(): void {
+  message = '';
+  title = '';
+  constructor(private authService: AuthService, private router: Router) { 
   }
 
   signup() {
@@ -33,26 +33,35 @@ export class SignUpComponent implements OnInit {
 		if(this.email && this.password && this.fullName && this.dob){
 			this.authService.signup(userData)
 			.subscribe(
-			  response => {
-				// Handle successful login
-			  },
-			  error => {
-				// Handle login error
-			  }
+				response => {
+					console.log(response)
+					this.title = Titles.SUCCESS;
+					this.message = response.message;
+					// this.router.navigate(['/login']);
+					this.openPopup();
+				},
+				error => {
+					this.title = Titles.WARNING;
+					this.message = error.error.message;
+					this.openPopup()
+				}
 			);
 		} else {
-			console.log("please fill the required fileds!")
-			this.openPopup()
+			this.title = Titles.WARNING;
+			this.message = Messages.FILL_REQ_FILED;
+			this.openPopup();
 		}
 
 	}
 
 	openPopup() {
 		this.showPopup = true;
+		this.router.navigate(['/home']);
 	}
 	
 	closePopup() {
 		this.showPopup = false;
+		this.router.navigate(['/signup']);
 	}
 }
 

@@ -4,7 +4,9 @@
     min-height: 45vh;
     background-color: #b291e7;
 }
-  
+.product-grid {
+    max-height: 0 !important;
+}  
 router-outlet {
     flex: 1; /* Allows the content to grow and occupy remaining space */
 }

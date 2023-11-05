@@ -6,7 +6,7 @@
           <div class="card-header">
             <br>
             <h3><b>LOGIN</b></h3>
-            <app-custom-popup *ngIf="showPopup" (close)="closePopup()"></app-custom-popup>
+            <!-- <app-custom-popup *ngIf="showPopup" [title]="title" [message]="message"  (close)="closePopup()"></app-custom-popup> -->
           </div>
           <div class="card-body">
             <br>
@@ -14,7 +14,7 @@
             <form (ngSubmit)="login()" #loginForm="ngForm">
               <div class="form-group">
                 <!-- <label for="username">Username</label> -->
-                <input type="text" class="form-control" id="username" name="username" placeholder="email" [(ngModel)]="username" required>
+                <input type="text" class="form-control" id="username" name="username" placeholder="email" [(ngModel)]="email" required>
               </div>
               <div class="form-group">
                 <!-- <label for="password">Password</label> -->
@@ -22,7 +22,7 @@
               </div>
               <br>
               <span>
-                <button type="submit"  mat-raised-button color="primary">Login</button>
+                <button type="submit"  mat-raised-button color="primary" >Login</button>
                 <br>
                 <p></p>
               <button class= "signup" mat-raised-button color="primary" routerLink="/signup">Create Account</button>

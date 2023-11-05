@@ -1,1 +1,14 @@
-<p>products works!</p>
+<div class="home-div">
+    <div class="product-grid">
+      <div class ="products" *ngFor="let item of productList">
+        <div class="card">
+          <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top" alt="Fissure in Sandstone"/>
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text"></p>
+            <a href="#!" class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
