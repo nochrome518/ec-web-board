@@ -3,14 +3,17 @@ import { Injectable } from "@angular/core";
 import { environment } from '../../environments/environment';
 import { Observable } from "rxjs";
 import { BackendSuccessResponseWithData, BackendSuccessResponseWithoutData } from '../model/response-data'
-import { LoginComponent } from "../login/login.component";
+import { Router } from "@angular/router";
+import { Messages } from "../constants/messages";
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   loggedIn: boolean = false;
-  constructor(private http: HttpClient) { }
+  message: string | undefined
+  
+  constructor(private http: HttpClient,  private router: Router) { }
 
 	ngOnInit(): void {
 	}
@@ -39,6 +42,8 @@ export class AuthService {
 	logout() {
 		this.loggedIn = false;
 		localStorage.removeItem('jwtToken');
-		console.log("this.loggedIn",this.loggedIn)
+		this.message = Messages.LOGOUT_SUCCESS
+		alert(this.message)
+		this.router.navigate(['/home']);
 	}
 }

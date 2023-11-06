@@ -23,7 +23,8 @@ export const Messages = {
     MERCHANT_LIST: 'Merchant list retrieved successfully',
     MERCHANT_EXISTS: "mId already exists or contact email already in use",
     FILL_REQ_FILED: "*Please fill the fields marked as required.",
-    LOGIN_SUCCESS: "Access approved successfully!",
+    LOGIN_SUCCESS: "Login approved successfully!",
+    LOGOUT_SUCCESS: "Logged out successfully!",
 }
 
 export const Titles = {

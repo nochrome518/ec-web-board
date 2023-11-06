@@ -29,32 +29,24 @@ export class LoginComponent {
 					localStorage.setItem('jwtToken', this.token);
 					this.title = Titles.SUCCESS;
 					this.message = Messages.LOGIN_SUCCESS;
-					// this.router.navigate(['/home']);
 					this.authService.LoggedIn();
-					this.openPopup()
+					alert(this.message)
+					this.router.navigate(['/home']);
 
 				},
 				error => {
 					console.log(error);
 					this.title = Titles.WARNING;
 					this.message = error.error.message;
-					this.openPopup()
+					alert(this.message)
+					this.router.navigate(['/login']);
 				}
 			);
 		} else {
 			this.title = Titles.WARNING;
 			this.message = Messages.FILL_REQ_FILED;
-			this.openPopup();
+			alert(this.message)
+			this.router.navigate(['/login']);
 		}
-	}
-
-	openPopup() {
-		this.showPopup = true;
-		this.router.navigate(['/home'])
-	}
-
-	closePopup() {
-		this.showPopup = false;
-		this.router.navigate(['/login']);
 	}
 }

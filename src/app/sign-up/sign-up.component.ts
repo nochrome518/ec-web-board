@@ -37,31 +37,24 @@ export class SignUpComponent {
 					console.log(response)
 					this.title = Titles.SUCCESS;
 					this.message = response.message;
-					// this.router.navigate(['/login']);
-					this.openPopup();
+					alert(this.message)
+					this.router.navigate(['/login']);
 				},
 				error => {
 					this.title = Titles.WARNING;
 					this.message = error.error.message;
-					this.openPopup()
+					alert(this.message)
+					this.router.navigate(['/signup']);
 				}
 			);
 		} else {
 			this.title = Titles.WARNING;
 			this.message = Messages.FILL_REQ_FILED;
-			this.openPopup();
+			alert(this.message)
+			this.router.navigate(['/signup']);
 		}
 
 	}
 
-	openPopup() {
-		this.showPopup = true;
-		this.router.navigate(['/home']);
-	}
-	
-	closePopup() {
-		this.showPopup = false;
-		this.router.navigate(['/signup']);
-	}
 }
 
